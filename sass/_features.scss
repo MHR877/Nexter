@@ -1,0 +1,33 @@
+.features {
+    grid-column: center-start / center-end;
+    margin: 15rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(25rem , 1fr));
+    gap: 6rem;
+    align-items: start;
+
+    @media only screen and ( max-width : 800px) {
+        margin: 10rem 0;
+    }
+    // @media only screen and ( max-width : 600px) {
+    //     padding: 5rem
+    // }
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1.5rem 2.5rem;
+    align-items: center;
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    &__text {
+        font-size: 1.7rem;
+        grid-column: 2 / -1;
+    }
+}
